@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>M4S HTML</title>
+    <link rel="stylesheet" href="style.css" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Coder Info -->
+    <div>
+      <h1 class="large-header">
+        Coder Info
+      </h1>
+      <p id="name-text">
+        Eddie Taliaferro II
+      </p>
+      <ul>
+        <li>Researching My Next Move</li>
+        <li>Watching/Playing Sports</li>
+        <li>Longboarding w/ Music</li>
+      </ul>
+      <img src="https://picsum.photos/200" />
+      <br>
+      <a href="https://google.com">Link</a>
+    </div>
+    
+    <!-- User Form -->
+    <div>
+      <h1 class="large-header">
+        User Form
+      </h1>
+      <form>
+        <input type="text" placeholder="First Name" />
+        <input type="text" placeholder="Last Name" />
+        <br>
+        <input type="radio" />
+        <label>Male</label>
+        <br>
+        <input type="radio" />
+        <label>Female</label>
+        <br>
+        
+        <!-- 
+          Most HTML Elements have Event Attributes, like
+          click, onmouseenter, onmouseleave, etc.
+        -->
+        <button id="submit-btn" onmouseenter="updateSubmitButtonEnter()" onmouseleave="updateSubmitButtonExit()">
+          Submit
+        </button>
+      </form>
+    </div>
+    
+    <!--   JavaScript   -->
+    <script>
+      var name = "My name is Eddie Taliaferro II";
+      
+      // The 'document' object is a native javascript object that represents 
+      // the root object of an HTML Document aka this HTML document. 
+      var coderName = document.getElementById("name-text");
+      var submitButton = document.getElementById("submit-btn");
+      
+      // Programmatically Change the color of the paragraph element with the ID "name text"
+      coderName.style.color = 'green';
+      
+      // onmouseenter event      
+      function updateSubmitButtonEnter() {
+        // alert() is a native javascript function
+        // alert(name);
+        
+        // Dynamically change the styling of the Submit Button
+        submitButton.style.transition = '0.2s';
+        submitButton.style.background = 'red';
+        submitButton.style.color = '#ffffff';
+        submitButton.style.fontWeight = '700';
+        submitButton.style.padding = '6px';
+      }
+      
+      // onmouseleave event    
+      function updateSubmitButtonExit() {
+        // alert() is a native javascript function
+        alert("You've stopped hovering over the Submit Button, " + name);
+        
+        // Dynamically change the styling of the Submit Button
+        submitButton.style.transition = '0.2s';
+        submitButton.style.background = 'lightgray';
+        submitButton.style.color = '#000';
+        submitButton.style.fontWeight = '200';
+        submitButton.style.padding = '2px';
+        
+      }
+      
+    </script>
+  </body>
+</html>
